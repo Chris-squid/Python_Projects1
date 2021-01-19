@@ -1,17 +1,18 @@
 #create the Parent class to pass data onto the child class
-class Person:
-  def __init__(self, fname, lname):
-    self.firstname = fname
-    self.lastname = lname
+class Fruit:
+  def __init__(self):
+    self.name = "Fruit"
+#Child classes where data is passed onto
+class Hard(Fruit):
+  def __init__(self):
+    self.name = "Apple"
+    self.color = "Red"
+    self.taste = "Sweet"
 
-  def printname(self):
-    print(self.firstname, self.lastname)
 
-#Child class where data is passed onto
-class Student(Person):
-  def __init__(self, fname, lname):
-    Person.__init__(self, fname, lname)
-
-x = Student("Chris", "Robinson")
-x.printname()
+class Soft(Fruit):
+  def __intit__(self):
+    self.name = "Banana"
+    self.smell = "Fragrant"
+    self.genus = "Musaceae"
 #output of data from both classes
