@@ -15,7 +15,7 @@
 # Importing necessary packages
 import shutil
 import tkinter as tk
-from tkinter import *
+from tk import *
 from tkinter import messagebox, filedialog
 
 # Defining CreateWidgets() function to create necessary tkinter widgets
@@ -48,7 +48,7 @@ def SourceBrowse():
     # Opening the file-dialog directory prompting the user to select files to copy using
     # filedialog.askopenfilenames() method. Setting initialdir argument is optional
     # Since multiple files may be selected, converting the selection to list using list()
-    root.files_list = list(filedialog.askdirectory(initialdir="C:/Users/15039/OneDrive/Desktop/F"))
+    root.files_list = list(filedialog.askopenfilenames(initialdir="C:/Users/15039/OneDrive/Desktop/F"))
 
     # Displaying the selected files in the root.sourceText Entry using root.sourceText.insert()
     root.sourceText.insert('1', root.files_list)
