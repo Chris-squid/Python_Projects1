@@ -29,7 +29,7 @@ def balance(request, pk):
     table_contents = { }
     for t in transactions:
         if t.type == 'Deposit':
-            current_total =+ t.amount
+            current_total += t.amount
             table_contents.update({t : current_total})
         else:
             current_total -= t.amount
